@@ -1,0 +1,1021 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1186</width>
+    <height>742</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Preferred" vsizetype="MinimumExpanding">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>1210</width>
+    <height>788</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(244,254,251);</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QStackedWidget" name="centralStackedWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>20</y>
+      <width>1171</width>
+      <height>741</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <widget class="QWidget" name="generalDescriptionPage">
+     <widget class="QComboBox" name="repaymentMethodComboBox">
+      <property name="geometry">
+       <rect>
+        <x>736</x>
+        <y>630</y>
+        <width>101</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Microsoft YaHei UI</family>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QComboBox { height: 25px; border-radius: 4px; border: 1px solid rgb(219, 219, 219); background: rgb(26,217,158); }
+QComboBox:enabled { color: rgb(5,42,30); }
+QComboBox:!enabled { color: rgb(155, 155, 155); }
+QComboBox:enabled:hover, QComboBox:enabled:focus { color: rgb(5,42,30); background: rgb(22,182,132); }
+QComboBox::drop-down { width: 20px; border: none; background: transparent; }
+QComboBox::drop-down:hover { background: rgba(255, 255, 255, 30); }
+QComboBox::down-arrow { image: url(:/Black/arrowBottom); }
+QComboBox::down-arrow:on { /**top: 1px;**/ }
+QComboBox QAbstractItemView { border: 1px solid rgb(100, 100, 100); background:rgb(22,182,132); outline: none; }
+QComboBox QAbstractItemView::item { height: 25px; color: rgb(82,85,84); }
+QComboBox QAbstractItemView::item:selected { background: rgb(82,85,84); color: rgb(82,85,84); }</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="loanTypeComboBox">
+      <property name="geometry">
+       <rect>
+        <x>1000</x>
+        <y>630</y>
+        <width>101</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Microsoft YaHei</family>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QComboBox { height: 25px; border-radius: 4px; border: 1px solid rgb(219, 219, 219); background: rgb(26,217,158); }
+QComboBox:enabled { color: rgb(5,42,30); }
+QComboBox:!enabled { color: rgb(155, 155, 155); }
+QComboBox:enabled:hover, QComboBox:enabled:focus { color: rgb(5,42,30); background: rgb(22,182,132); }
+QComboBox::drop-down { width: 20px; border: none; background: transparent; }
+QComboBox::drop-down:hover { background: rgba(255, 255, 255, 30); }
+QComboBox::down-arrow { image: url(:/Black/arrowBottom); }
+QComboBox::down-arrow:on { /**top: 1px;**/ }
+QComboBox QAbstractItemView { border: 1px solid rgb(100, 100, 100); background:rgb(22,182,132); outline: none; }
+QComboBox QAbstractItemView::item { height: 25px; color: rgb(175, 175, 175); }
+QComboBox QAbstractItemView::item:selected { background: rgb(22,182,132); color: rgb(230, 230, 230); }</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="repaymentMethoodLabel">
+      <property name="geometry">
+       <rect>
+        <x>630</x>
+        <y>630</y>
+        <width>68</width>
+        <height>15</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Microsoft YaHei</family>
+        <weight>50</weight>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(82,85,84);</string>
+      </property>
+      <property name="text">
+       <string>还款类型</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="loanTypeLabel">
+      <property name="geometry">
+       <rect>
+        <x>910</x>
+        <y>630</y>
+        <width>68</width>
+        <height>15</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Microsoft YaHei</family>
+        <weight>50</weight>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(82,85,84);</string>
+      </property>
+      <property name="text">
+       <string>贷款类别</string>
+      </property>
+     </widget>
+     <widget class="QStackedWidget" name="loanTypeStackedWidget">
+      <property name="geometry">
+       <rect>
+        <x>560</x>
+        <y>80</y>
+        <width>601</width>
+        <height>531</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Microsoft YaHei</family>
+       </font>
+      </property>
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="normalTypePage">
+       <widget class="QLineEdit" name="totalAmountLineEdit">
+        <property name="geometry">
+         <rect>
+          <x>270</x>
+          <y>220</y>
+          <width>291</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Microsoft YaHei</family>
+          <pointsize>15</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QLineEdit{border-style:none;padding:6px;border-radius:2px;border:2px solid rgb(219,219,219);color: rgb(82,85,84);}
+QLineEdit:focus{border:2px solid rgb(22,182,132);}
+</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="totalAmountLabel">
+        <property name="geometry">
+         <rect>
+          <x>80</x>
+          <y>200</y>
+          <width>151</width>
+          <height>81</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Microsoft YaHei</family>
+          <weight>50</weight>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(82,85,84);</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::NoFrame</enum>
+        </property>
+        <property name="text">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:22pt;&quot;&gt;贷款总额&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+        <property name="textFormat">
+         <enum>Qt::MarkdownText</enum>
+        </property>
+       </widget>
+       <widget class="QDoubleSpinBox" name="interestRateSpinBox">
+        <property name="geometry">
+         <rect>
+          <x>500</x>
+          <y>430</y>
+          <width>71</width>
+          <height>22</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Microsoft YaHei</family>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QDoubleSpinBox { border-radius: 4px; height: 24px; min-width: 40px; border: 1px solid rgb(219,219,219); background: white; }
+QDoubleSpinBox:enabled { color:black; }
+QDoubleSpinBox:enabled:hover, QLineEdit:enabled:focus { color: rgb(230, 230, 230); }
+QDoubleSpinBox:!enabled { color: rgb(65, 65, 65); background: transparent; }
+QDoubleSpinBox::up-button { width: 18px; height: 12px; border-top-right-radius: 4px; border-left: 1px solid rgb(219,219,219); image: url(:/Black/upButton); background: rgb(26,217,158); }
+QDoubleSpinBox::up-button:!enabled { border-left: 1px solid gray; background: transparent; }
+QDoubleSpinBox::up-button:enabled:hover { background: rgb(22,182,132); }
+QDoubleSpinBox::down-button { width: 18px; height: 12px; border-bottom-right-radius: 4px; border-left: 1px solid rgb(219,219,219); image: url(:/Black/downButton); background: rgb(26,217,158); }
+QDoubleSpinBox::down-button:!enabled { border-left: 1px solid gray; background: transparent; }
+QDoubleSpinBox::down-button:enabled:hover { background: rgb(22,182,132); }</string>
+        </property>
+       </widget>
+       <widget class="QSpinBox" name="loanPeriodSpinBox">
+        <property name="geometry">
+         <rect>
+          <x>500</x>
+          <y>340</y>
+          <width>71</width>
+          <height>22</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Microsoft YaHei</family>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QSpinBox { border-radius: 4px; height: 24px; min-width: 40px; border: 1px solid rgb(219,219,219); background: white; }
+QSpinBox:enabled { color:black; }
+QSpinBox:enabled:hover, QLineEdit:enabled:focus { color: rgb(230, 230, 230); }
+QSpinBox:!enabled { color: rgb(65, 65, 65); background: transparent; }
+QSpinBox::up-button { width: 18px; height: 12px; border-top-right-radius: 4px; border-left: 1px solid rgb(219,219,219); image: url(:/Black/upButton); background: rgb(26,217,158); }
+QSpinBox::up-button:!enabled { border-left: 1px solid gray; background: transparent; }
+QSpinBox::up-button:enabled:hover { background: rgb(22,182,132); }
+QSpinBox::down-button { width: 18px; height: 12px; border-bottom-right-radius: 4px; border-left: 1px solid rgb(219,219,219); image: url(:/Black/downButton); background: rgb(26,217,158); }
+QSpinBox::down-button:!enabled { border-left: 1px solid gray; background: transparent; }
+QSpinBox::down-button:enabled:hover { background: rgb(22,182,132); }</string>
+        </property>
+       </widget>
+       <widget class="QSlider" name="interestRateSlider">
+        <property name="geometry">
+         <rect>
+          <x>80</x>
+          <y>421</y>
+          <width>351</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QSlider::handle:horizontal{width:24px;background-color:rgb(26,217,158);margin:-11px 0px -11px 0px;border-radius:12px;}
+                            
+ QSlider::groove:horizontal{height:2px;background-color:rgb(219,219,219);}
+                             
+QSlider::add-page:horizontal{background-color:rgb(219,219,219);}
+                       
+QSlider::sub-page:horizontal{background-color:rgb(26,217,110);}
+</string>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+       </widget>
+       <widget class="QSlider" name="loanPeriodSlider">
+        <property name="geometry">
+         <rect>
+          <x>80</x>
+          <y>330</y>
+          <width>351</width>
+          <height>51</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QSlider::handle:horizontal{width:24px;background-color:rgb(26,217,158);margin:-11px 0px -11px 0px;border-radius:12px;}
+                            
+ QSlider::groove:horizontal{height:2px;background-color:rgb(219,219,219);}
+                             
+QSlider::add-page:horizontal{background-color:rgb(219,219,219);}
+                       
+QSlider::sub-page:horizontal{background-color:rgb(26,217,110);}
+</string>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_10">
+        <property name="geometry">
+         <rect>
+          <x>510</x>
+          <y>400</y>
+          <width>68</width>
+          <height>15</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Microsoft YaHei</family>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(82,85,84);</string>
+        </property>
+        <property name="text">
+         <string>利率</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_11">
+        <property name="geometry">
+         <rect>
+          <x>510</x>
+          <y>310</y>
+          <width>71</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Microsoft YaHei</family>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(82,85,84);</string>
+        </property>
+        <property name="text">
+         <string>年限</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_12">
+        <property name="geometry">
+         <rect>
+          <x>580</x>
+          <y>430</y>
+          <width>68</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Microsoft YaHei</family>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(82,85,84);</string>
+        </property>
+        <property name="text">
+         <string>%</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_14">
+        <property name="geometry">
+         <rect>
+          <x>580</x>
+          <y>340</y>
+          <width>68</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Microsoft YaHei</family>
+          <weight>50</weight>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(82,85,84);</string>
+        </property>
+        <property name="text">
+         <string>年</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="mixedTypePage">
+       <widget class="QLineEdit" name="mixedPublicLineEdit">
+        <property name="geometry">
+         <rect>
+          <x>250</x>
+          <y>260</y>
+          <width>291</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Microsoft YaHei</family>
+          <pointsize>15</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QLineEdit{border-style:none;padding:6px;border-radius:2px;border:2px solid rgb(219,219,219);color: rgb(82,85,84);}
+QLineEdit:focus{border:2px solid rgb(22,182,132);}
+</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="totalAmountLabel_2">
+        <property name="geometry">
+         <rect>
+          <x>80</x>
+          <y>240</y>
+          <width>151</width>
+          <height>81</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Microsoft YaHei</family>
+          <weight>50</weight>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(82,85,84);</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::NoFrame</enum>
+        </property>
+        <property name="text">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:22pt;&quot;&gt;公积金总&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+        <property name="textFormat">
+         <enum>Qt::MarkdownText</enum>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="mixedCommercialLineEdit">
+        <property name="geometry">
+         <rect>
+          <x>250</x>
+          <y>80</y>
+          <width>291</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Microsoft YaHei</family>
+          <pointsize>15</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QLineEdit{border-style:none;padding:6px;border-radius:2px;border:2px solid rgb(219,219,219);color: rgb(82,85,84);}
+QLineEdit:focus{border:2px solid rgb(22,182,132);}
+</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="totalAmountLabel_3">
+        <property name="geometry">
+         <rect>
+          <x>80</x>
+          <y>60</y>
+          <width>151</width>
+          <height>81</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Microsoft YaHei</family>
+          <weight>50</weight>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(82,85,84);</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::NoFrame</enum>
+        </property>
+        <property name="text">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:22pt;&quot;&gt;商业贷款&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+        <property name="textFormat">
+         <enum>Qt::MarkdownText</enum>
+        </property>
+       </widget>
+       <widget class="QDoubleSpinBox" name="interestRateSpinBox_1">
+        <property name="geometry">
+         <rect>
+          <x>470</x>
+          <y>190</y>
+          <width>71</width>
+          <height>22</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Microsoft YaHei</family>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QDoubleSpinBox { border-radius: 4px; height: 24px; min-width: 40px; border: 1px solid rgb(219,219,219); background: white; }
+QDoubleSpinBox:enabled { color:black; }
+QDoubleSpinBox:enabled:hover, QLineEdit:enabled:focus { color: rgb(230, 230, 230); }
+QDoubleSpinBox:!enabled { color: rgb(65, 65, 65); background: transparent; }
+QDoubleSpinBox::up-button { width: 18px; height: 12px; border-top-right-radius: 4px; border-left: 1px solid rgb(219,219,219); image: url(:/Black/upButton); background: rgb(26,217,158); }
+QDoubleSpinBox::up-button:!enabled { border-left: 1px solid gray; background: transparent; }
+QDoubleSpinBox::up-button:enabled:hover { background: rgb(22,182,132); }
+QDoubleSpinBox::down-button { width: 18px; height: 12px; border-bottom-right-radius: 4px; border-left: 1px solid rgb(219,219,219); image: url(:/Black/downButton); background: rgb(26,217,158); }
+QDoubleSpinBox::down-button:!enabled { border-left: 1px solid gray; background: transparent; }
+QDoubleSpinBox::down-button:enabled:hover { background: rgb(22,182,132); }</string>
+        </property>
+       </widget>
+       <widget class="QSlider" name="mixedLoanPeriodSlider">
+        <property name="geometry">
+         <rect>
+          <x>50</x>
+          <y>471</y>
+          <width>351</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QSlider::handle:horizontal{width:24px;background-color:rgb(26,217,158);margin:-11px 0px -11px 0px;border-radius:12px;}
+                            
+ QSlider::groove:horizontal{height:2px;background-color:rgb(219,219,219);}
+                             
+QSlider::add-page:horizontal{background-color:rgb(219,219,219);}
+                       
+QSlider::sub-page:horizontal{background-color:rgb(26,217,110);}
+</string>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+       </widget>
+       <widget class="QSpinBox" name="mixedLoanPeriodSpinBox">
+        <property name="geometry">
+         <rect>
+          <x>470</x>
+          <y>470</y>
+          <width>71</width>
+          <height>22</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Microsoft YaHei</family>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QSpinBox { border-radius: 4px; height: 24px; min-width: 40px; border: 1px solid rgb(219,219,219); background: white; }
+QSpinBox:enabled { color:black; }
+QSpinBox:enabled:hover, QLineEdit:enabled:focus { color: rgb(230, 230, 230); }
+QSpinBox:!enabled { color: rgb(65, 65, 65); background: transparent; }
+QSpinBox::up-button { width: 18px; height: 12px; border-top-right-radius: 4px; border-left: 1px solid rgb(219,219,219); image: url(:/Black/upButton); background: rgb(26,217,158); }
+QSpinBox::up-button:!enabled { border-left: 1px solid gray; background: transparent; }
+QSpinBox::up-button:enabled:hover { background: rgb(22,182,132); }
+QSpinBox::down-button { width: 18px; height: 12px; border-bottom-right-radius: 4px; border-left: 1px solid rgb(219,219,219); image: url(:/Black/downButton); background: rgb(26,217,158); }
+QSpinBox::down-button:!enabled { border-left: 1px solid gray; background: transparent; }
+QSpinBox::down-button:enabled:hover { background: rgb(22,182,132); }</string>
+        </property>
+       </widget>
+       <widget class="QSlider" name="mixedInterestRateSlider1">
+        <property name="geometry">
+         <rect>
+          <x>50</x>
+          <y>181</y>
+          <width>351</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QSlider::handle:horizontal{width:24px;background-color:rgb(26,217,158);margin:-11px 0px -11px 0px;border-radius:12px;}
+                            
+ QSlider::groove:horizontal{height:2px;background-color:rgb(219,219,219);}
+                             
+QSlider::add-page:horizontal{background-color:rgb(219,219,219);}
+                       
+QSlider::sub-page:horizontal{background-color:rgb(26,217,110);}
+</string>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+       </widget>
+       <widget class="QDoubleSpinBox" name="interestRateSpinBox_2">
+        <property name="geometry">
+         <rect>
+          <x>470</x>
+          <y>370</y>
+          <width>71</width>
+          <height>22</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Microsoft YaHei</family>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QDoubleSpinBox { border-radius: 4px; height: 24px; min-width: 40px; border: 1px solid rgb(219,219,219); background: white; }
+QDoubleSpinBox:enabled { color:black; }
+QDoubleSpinBox:enabled:hover, QLineEdit:enabled:focus { color: rgb(230, 230, 230); }
+QDoubleSpinBox:!enabled { color: rgb(65, 65, 65); background: transparent; }
+QDoubleSpinBox::up-button { width: 18px; height: 12px; border-top-right-radius: 4px; border-left: 1px solid rgb(219,219,219); image: url(:/Black/upButton); background: rgb(26,217,158); }
+QDoubleSpinBox::up-button:!enabled { border-left: 1px solid gray; background: transparent; }
+QDoubleSpinBox::up-button:enabled:hover { background: rgb(22,182,132); }
+QDoubleSpinBox::down-button { width: 18px; height: 12px; border-bottom-right-radius: 4px; border-left: 1px solid rgb(219,219,219); image: url(:/Black/downButton); background: rgb(26,217,158); }
+QDoubleSpinBox::down-button:!enabled { border-left: 1px solid gray; background: transparent; }
+QDoubleSpinBox::down-button:enabled:hover { background: rgb(22,182,132); }</string>
+        </property>
+       </widget>
+       <widget class="QSlider" name="mixedInterestRateSlider2">
+        <property name="geometry">
+         <rect>
+          <x>50</x>
+          <y>360</y>
+          <width>351</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QSlider::handle:horizontal{width:24px;background-color:rgb(26,217,158);margin:-11px 0px -11px 0px;border-radius:12px;}
+                            
+ QSlider::groove:horizontal{height:2px;background-color:rgb(219,219,219);}
+                             
+QSlider::add-page:horizontal{background-color:rgb(219,219,219);}
+                       
+QSlider::sub-page:horizontal{background-color:rgb(26,217,110);}
+</string>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_3">
+        <property name="geometry">
+         <rect>
+          <x>480</x>
+          <y>340</y>
+          <width>68</width>
+          <height>15</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Microsoft YaHei</family>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(82,85,84);</string>
+        </property>
+        <property name="text">
+         <string>利率</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_6">
+        <property name="geometry">
+         <rect>
+          <x>480</x>
+          <y>440</y>
+          <width>71</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Microsoft YaHei</family>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(82,85,84);</string>
+        </property>
+        <property name="text">
+         <string>年限</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_7">
+        <property name="geometry">
+         <rect>
+          <x>550</x>
+          <y>190</y>
+          <width>68</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Microsoft YaHei</family>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(82,85,84);</string>
+        </property>
+        <property name="text">
+         <string>%</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_8">
+        <property name="geometry">
+         <rect>
+          <x>550</x>
+          <y>370</y>
+          <width>68</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Microsoft YaHei</family>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(82,85,84);</string>
+        </property>
+        <property name="text">
+         <string>%</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_9">
+        <property name="geometry">
+         <rect>
+          <x>480</x>
+          <y>160</y>
+          <width>68</width>
+          <height>15</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Microsoft YaHei</family>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(82,85,84);</string>
+        </property>
+        <property name="text">
+         <string>利率</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_13">
+        <property name="geometry">
+         <rect>
+          <x>550</x>
+          <y>470</y>
+          <width>68</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Microsoft YaHei</family>
+          <weight>50</weight>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(82,85,84);</string>
+        </property>
+        <property name="text">
+         <string>年</string>
+        </property>
+       </widget>
+      </widget>
+     </widget>
+     <widget class="QLabel" name="MonthlyPaymentlabel">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>30</y>
+        <width>451</width>
+        <height>91</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Microsoft YaHei UI Light</family>
+        <pointsize>50</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(82,85,84);</string>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="QWidget" name="verticalLayoutWidget">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>160</y>
+        <width>571</width>
+        <height>521</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout1"/>
+     </widget>
+     <widget class="QPushButton" name="pushButton">
+      <property name="geometry">
+       <rect>
+        <x>870</x>
+        <y>0</y>
+        <width>181</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Microsoft YaHei</family>
+        <pointsize>-1</pointsize>
+        <underline>false</underline>
+        <strikeout>false</strikeout>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+   background-color: rgb(26,217,158); 
+    border: none;
+    color:rgb(82,85,84);
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 4px;
+   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+QPushButton#pushButton:pressed {  
+    background-color:rgb(22,182,132);  
+    border-style:inset;   
+}  
+</string>
+      </property>
+      <property name="text">
+       <string>查看明细</string>
+      </property>
+     </widget>
+     <widget class="QStackedWidget" name="resultDisplayPage">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>140</y>
+        <width>161</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Microsoft YaHei</family>
+        <pointsize>6</pointsize>
+       </font>
+      </property>
+      <property name="currentIndex">
+       <number>1</number>
+      </property>
+      <widget class="QWidget" name="fixedPaymentPage">
+       <widget class="QLabel" name="label">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>0</y>
+          <width>131</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Microsoft YaHei</family>
+          <pointsize>16</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(82,85,84);</string>
+        </property>
+        <property name="text">
+         <string>每月月供</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="fixedBasisPage">
+       <widget class="QLabel" name="firstMonthLable">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>0</y>
+          <width>161</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Microsoft YaHei</family>
+          <pointsize>16</pointsize>
+          <stylestrategy>PreferAntialias</stylestrategy>
+          <kerning>false</kerning>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(82,85,84);</string>
+        </property>
+        <property name="text">
+         <string>首月月供</string>
+        </property>
+       </widget>
+      </widget>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="detailPage">
+     <widget class="QPushButton" name="pushButton_2">
+      <property name="geometry">
+       <rect>
+        <x>870</x>
+        <y>0</y>
+        <width>181</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Microsoft YaHei</family>
+        <pointsize>-1</pointsize>
+        <underline>false</underline>
+        <strikeout>false</strikeout>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+   background-color: rgb(26,217,158); 
+    border: none;
+    color:rgb(82,85,84);
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 4px;
+   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+QPushButton#pushButton:pressed {  
+    background-color:rgb(22,182,132);  
+    border-style:inset;   
+}  
+</string>
+      </property>
+      <property name="text">
+       <string>查看概括</string>
+      </property>
+     </widget>
+     <widget class="QTableWidget" name="tableWidget">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>70</y>
+        <width>1141</width>
+        <height>621</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QTableWidget 
+QHeaderView::section{background:#0f7e5c;font-weight:bold; 
+border:none; height:35px; color:white;}
+
+QTableWidget{gridline-color:#0f7e5c; color:#888; border:none; 
+alternate-background-color:rgb(223,251,243);}
+
+
+</string>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1186</width>
+     <height>26</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
